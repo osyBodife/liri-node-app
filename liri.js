@@ -118,8 +118,8 @@ axios.get("http://www.omdbapi.com/?i=tt3896198&apikey=bf76ed6a&t=" + searchTerm 
 //});
 
 
-axios.get("https://rest.bandsintown.com/artists/" + searchTerm + "/events?app_id=codingbootcamp" ).then(
-  //axios.get("https://rest.bandsi}ntown.com/artists/" + searchTerm  + "/events?app_id=" + bandsintown).then(
+//axios.get("https://rest.bandsintown.com/artists/" + searchTerm + "/events?app_id=codingbootcamp" ).then(
+  axios.get("https://rest.bandsi}ntown.com/artists/" + searchTerm  + "/events?app_id=" + bandsintown).then(
   function(response) {
     // If the axios was successful...
     // Then log the body from the site!
