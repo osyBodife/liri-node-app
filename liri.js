@@ -31,7 +31,7 @@ let omdb = (keys.omdb);
 let bandsintown = (keys.bandsintown);
 
 
-function doThis() {
+function doThis(searchTerm) {
   // UTILIZE THE BUILT IN READFILE METHOD TO ACCESS RANDOM.TXT
   fs.readFile("random.txt", "utf8", function (error, data) {
     if (error) {

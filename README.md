@@ -43,14 +43,21 @@ LIRI is a _Language_ Interpretation and Recognition Interface. LIRI will be a co
 
 </table>
 <h5> Output :screen shots<h5>
-<P>Action : movie-this
+<p>Action : movie-this
 <br>
 
 <img src="assets/movie-this.png">
 </p>
 
-<P>Action : spotify-this
+<p>Action : spotify-this
 <br>
 
-<img src="assets/spotify_img_01">
+<img src="assets/spotify_img_01.png">
+</p>
+
+
+<p>Action : do-this
+<br>
+
+<img src="assets/do-this.png">
 </p>
