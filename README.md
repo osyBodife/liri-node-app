@@ -33,7 +33,11 @@ LIRI is a _Language_ Interpretation and Recognition Interface. LIRI will be a co
 
 <tr><td>dotenv</td><td> Dotenv is a zero-dependency module that loads environment variables from a .env file into process.env. Storing configuration in the environment separate from code is based on The Twelve-Factor App methodology.(ref:https://www.npmjs.com/package/dotenv ). it was install on the root directory using : npm install dotenv</td></tr>
 
-<tr><td>movie-this</td><td> This action initiates the first paramter required to run getMovie function. The function is what access the omdb</td></tr>
+<tr><td>moment.js</td><td> A lightweight JavaScript date library for parsing, validating, manipulating, and formatting dates.(ref:https://www.npmjs.com/package/moment )</td></tr>
+
+
+<tr><td>npm install -y</td><td> This will initialize a `package.json` file for your project. The `package.json` file is required for installing third party npm packages and saving their version numbers.(reference :assignment instruction)</td></tr>
+
 
 
 
