@@ -57,10 +57,14 @@ function getBandsInTown() {
     function (response) {
       // If the axios was successful...
       // Then log the body from the site!
-      console.log(response.data);
-      //console.log(response.name);
-      //console.log(response.data[0].name);
-      //console.log(response.data.offers.venue.name);
+     console.log(response.data);
+     // console.log(response);
+      //let bands=  response.data[0]['offers'];
+     // console.log(bands)
+      
+
+
+      
     },
 
     function (error) {
@@ -87,7 +91,7 @@ function spotifyThis() {
 
   // IF USER QUERY NOT FOUND, PASS VALUE OF "ACE OF BASE" 
   if (!searchTerm) {
-    searchTerm = "Wrong search term"
+    searchTerm = "\'The Sign\' by Ace of Base"
   };
 
   // SEARCH with spotify format
@@ -95,7 +99,7 @@ function spotifyThis() {
   spotify.search({
     type: 'track',
     query: searchTerm,
-    limit: 2
+    limit: 1
   }, function (error, data) {
     if (error) {
       return console.log('Error occurred: ' + error);
@@ -104,7 +108,8 @@ function spotifyThis() {
     let spotifyArray = data.tracks.items;
 
     for (i = 0; i < spotifyArray.length; i++) {
-      console.log(`\nBA DA BOP!  That's for you...\n\nArtist: ${data.tracks.items[i].album.artists[0].name} \nSong: ${data.tracks.items[i].name}\nAlbum: ${data.tracks.items[i].album.name}\nSpotify link: ${data.tracks.items[i].external_urls.spotify}\n\n - - - - -`)
+      console.log(`\n That's for you...\n\nArtist: ${data.tracks.items[i].album.artists[0].name} \nSong: ${data.tracks.items[i].name}\nAlbum: ${data.tracks.items[i].album.name}\nSpotify link: ${data.tracks.items[i].external_urls.spotify}\n\n - - - - -`)
+      console.log( "Artist: " + data.tracks.items[0].name)
     };
   });
 
@@ -143,16 +148,13 @@ function getMovie() {
         }
       
        
-        //}
-
-      
-      
+        //}     
 
         
       console.log("The  country of release :" + response.data.Country);
       console.log("The  Language of the movie:" + response.data.Language);
       console.log("The  Plot :" + response.data.Plot);
-      console.log("The  Actors :" + response.data.Actors);
+      console.log("The  Actors :" + response.data.Actors);       
 
     },
     function (error) {
