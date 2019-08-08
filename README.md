@@ -15,7 +15,8 @@ LIRI is a _Language_ Interpretation and Recognition Interface. LIRI will be a co
 
 <table>
 <tr><th>Action </th> <th>Purpose Description </th></tr>
-<tr><td>
+<tr><td>Spotify-this</td><td> This action initiates the first paramter required to SpotifyThis function. The function is what access the Spotify Api</td></tr>
+
 
 
 </table>
