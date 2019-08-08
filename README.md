@@ -48,3 +48,9 @@ LIRI is a _Language_ Interpretation and Recognition Interface. LIRI will be a co
 
 <img src="assets/movie-this.png">
 </p>
+
+<P>Action : spotify-this
+<br>
+
+<img src="assets/spotify_img_01">
+</p>
