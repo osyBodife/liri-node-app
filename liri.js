@@ -1,19 +1,12 @@
 var moment = require('moment');
 moment().format();
-
+require("dotenv").config();
 var keys = require("./keys.js");
 
 //initialize the variables to use
 var Spotify = require("node-spotify-api");
 var spotify = new Spotify(keys.spotify);
 
-
- /*
-var spotify = new Spotify({
-  id: '09b0a9b9b6e049aea77157b9e5434742',
-  secret: '638a49456f3842949c56f156b3dbdd9d' 
-});
-*/
 // OMDB AND BANDS IN TOWN API'S
 let omdb = (keys.omdb);
 let bandsintown = (keys.bandsintown);
