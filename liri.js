@@ -117,15 +117,38 @@ function spotifyThis() {
 ///Run the axios.get function...
 // The axios.get function takes in a URL and returns a promise (just like $.ajax)
 function getMovie() {
+  if (!searchTerm) {
+    searchTerm = "mr nobody";
+};
   axios.get("http://www.omdbapi.com/?i=tt3896198&apikey=bf76ed6a&t=" + searchTerm).then(
     function (response) {
       // If the axios was successful...
       // Then log the body from the site!
-      console.log(response.data);
+      //console.log(response.data);
       console.log(" Movie Title :" + response.data.Title);
       console.log(" Year of Release :" + response.data.Year);
       console.log("The  imdbRating :" + response.data.imdbRating);
-      //console.log("The Rotten Tomatoes Rating :" + response.data.imdbRating);
+      //to get the Rotten Tomatoe Rating
+      let rottenTomatoesRating=  response.data.Ratings;
+      //console.log(rottenTomatoesRating);
+      //console.log(rottenTomatoesRating.length);
+      //for (let i=1; i<rottenTomatoesRating.length; i++ ){
+        //check if Rotten Tomatoe Rating Exist
+        if(rottenTomatoesRating.length<0){
+          console.log("The Rotten Tomatoes Rating : " + "Not Available");
+
+        }else{
+          console.log("The Rotten Tomatoes Rating : " + rottenTomatoesRating[1]["Value"]);
+
+        }
+      
+       
+        //}
+
+      
+      
+
+        
       console.log("The  country of release :" + response.data.Country);
       console.log("The  Language of the movie:" + response.data.Language);
       console.log("The  Plot :" + response.data.Plot);
