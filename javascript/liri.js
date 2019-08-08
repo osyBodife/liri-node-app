@@ -8,9 +8,16 @@ moment().format();
 var keys = require("./keys.js");
 
 //initialize the variables to use
-const Spotify = require("node-spotify-api");
-const spotify = new Spotify(keys.spotify);
+var Spotify = require("node-spotify-api");
+var spotify = new Spotify(keys.spotify);
 
+
+ /*
+var spotify = new Spotify({
+  id: '09b0a9b9b6e049aea77157b9e5434742',
+  secret: '638a49456f3842949c56f156b3dbdd9d' 
+});
+*/
 // OMDB AND BANDS IN TOWN API'S
 let omdb = (keys.omdb);
 let bandsintown = (keys.bandsintown);
@@ -114,13 +121,14 @@ axios.get("http://www.omdbapi.com/?i=tt3896198&apikey=bf76ed6a&t=" + searchTerm 
 
 //});
 
-axios.get("https://rest.bandsi}ntown.com/artists/" + searchTerm  + "/events?app_id=" + bandsintown).then(
-//axios.get("https://rest.bandsintown.com/artists/" + searchTerm + "/events?app_id=codingbootcamp" ).then(
+
+axios.get("https://rest.bandsintown.com/artists/" + searchTerm + "/events?app_id=codingbootcamp" ).then(
+  //axios.get("https://rest.bandsi}ntown.com/artists/" + searchTerm  + "/events?app_id=" + bandsintown).then(
   function(response) {
     // If the axios was successful...
     // Then log the body from the site!
-    //console.log(response.data);
-    console.log(response.name);
+    console.log(response.data);
+    //console.log(response.name);
     //console.log(response.data[0].name);
     //console.log(response.data.offers.venue.name);
   },
