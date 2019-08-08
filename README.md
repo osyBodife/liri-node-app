@@ -42,3 +42,8 @@ LIRI is a _Language_ Interpretation and Recognition Interface. LIRI will be a co
 
 
 </table>
+<h5> Output :screen shots<h5>
+<P>Action : movie-this
+<br>
+<img src="assets/movie-this.png>
+</p>
