@@ -5,8 +5,15 @@ const axios = require('axios');
 var moment = require('moment');
 moment().format();
 
-//var keys = require("/javascript/keys.js");
+var keys = require("./keys.js");
 
+//initialize the variables to use
+const Spotify = require("node-spotify-api");
+const spotify = new Spotify(keys.spotify);
+
+// OMDB AND BANDS IN TOWN API'S
+let omdb = (keys.omdb);
+let bandsintown = (keys.bandsintown);
 
 
 //console.log(process.argv);
@@ -33,10 +40,10 @@ function doThis() {
 		
 
         // use the array elements as input parameters for userCommand function
-        userInput = dataArray[0];
-        userQuery = dataArray[1];
+       action = dataArray[0];
+        searchTerm = dataArray[1];
         // call the userCommand function
-        userCommand(userInput, userQuery);
+        userCommand(action, searchTerm);
     });
 };
 //Send all data requests to:
@@ -102,7 +109,13 @@ axios.get("http://www.omdbapi.com/?i=tt3896198&apikey=bf76ed6a&t=" + searchTerm 
 //https://rest.bandsintown.com/artists/" + argument + "/events?app_id=codingbootcamp"
     ///Run the axios.get function...
 // The axios.get function takes in a URL and returns a promise (just like $.ajax)
-axios.get("https://rest.bandsintown.com/artists/" + searchTerm + "/events?app_id=codingbootcamp" ).then(
+
+//axios.get("https://rest.bandsi}ntown.com/artists/" + searchTerm  + "/events?app_id=" + bandsintown, function (error, response, body) {
+
+//});
+
+axios.get("https://rest.bandsi}ntown.com/artists/" + searchTerm  + "/events?app_id=" + bandsintown).then(
+//axios.get("https://rest.bandsintown.com/artists/" + searchTerm + "/events?app_id=codingbootcamp" ).then(
   function(response) {
     // If the axios was successful...
     // Then log the body from the site!
