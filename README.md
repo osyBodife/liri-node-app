@@ -61,3 +61,10 @@ LIRI is a _Language_ Interpretation and Recognition Interface. LIRI will be a co
 
 <img src="assets/do-this.png">
 </p>
+
+
+<p>Action : concert-this
+<br>
+
+<img src="assets/concert-this.png">
+</p>

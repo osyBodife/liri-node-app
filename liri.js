@@ -57,8 +57,15 @@ function getBandsInTown() {
     function (response) {
       // If the axios was successful...
       // Then log the body from the site!
-     console.log(response.data);
-     // console.log(response);
+      //console.log(response.data);
+     console.log("Venue Name : " + response.data[0].venue.name);
+     console.log("Location : " + response.data[0].venue.city);
+     //console.log(" Date & Time : " + response.data[0].datetime);
+     
+                    // Use moment.js to format date and time to MM/DD/YYYY
+      let concertDate = moment(response.data[0].datetime).format("MM/DD/YYYY hh:00 A");
+                    
+      console.log("Concert Date & Time : " + concertDate);
       //let bands=  response.data[0]['offers'];
      // console.log(bands)
       
